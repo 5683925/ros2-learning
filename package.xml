@@ -1,0 +1,17 @@
+<?xml version="1.0"?> <!--声明这是一个XML文件，固定写法-->
+<package format="3">
+<name>Turtle</name>
+<version>0.0.1</version> <!--版本号-->
+<description>turtle2 追踪 turtle1的ROS2的节点</description>
+
+<maintrainer email="3382793407@qq.com">coco</maintrainer>
+<license>MIT</license>
+
+<depend>rclpy</depend>
+<depend>geometry_msgs</depend>
+<depend>turtlesim</depend>
+
+<export>
+<build_type>ament_python</build_type> <!--告诉ROS2这是一个PYTHON包，固定写法-->
+</export>
+</package>
