@@ -1,6 +1,6 @@
 <?xml version="1.0"?> <!--声明这是一个XML文件，固定写法-->
 <package format="3">
-<name>Turtle</name>
+<name>turtle_chaser</name>
 <version>0.0.1</version> <!--版本号-->
 <description>turtle2 追踪 turtle1的ROS2的节点</description>
 
