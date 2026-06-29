@@ -97,11 +97,10 @@ class TurtleTrackerNode(Node):
         cmd.linear.x=self.kp_linear*distance
         cmd.angular.z=self.kp_angular*angle_error
 
-        cmd.linear.x=min(cmd.linear.x,6.0)
-        cmd.angular.z=max(min(cmd.angular.z,6.0),-6.0)
+        cmd.linear.x=min(cmd.linear.x,2.0)
+        cmd.angular.z=max(min(cmd.angular.z,2.5),-2.5)
 
         self.pub_cmd.publish(cmd)
-
         self.get_logger().debug(
             f'距离:{distance:.2f} 角误差:{math.degrees(angle_error):.1f}° '
             f'v={cmd.linear.x:.2f} w={cmd.angular.z:.2f}'

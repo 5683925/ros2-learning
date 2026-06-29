@@ -10,12 +10,12 @@ def generate_launch_description():
         output='screen',
     )
 
-    tracker_node=TimeAction( #延迟一秒，等turtlesim就绪再启动追踪节点
+    tracker_node=TimerAction( #延迟一秒，等turtlesim就绪再启动追踪节点
         period=1.0, 
         actions=[
             Node(
-                package='turtle_tracker',
-                executable='turtle_tracker_node',
+                package='turtle_chaser',
+                executable='turtle_tracker',
                 name='turtle_tracker',
                 output='screen', #让日志打印到当前终端，方便调试
                 parameters=[{
