@@ -1,7 +1,12 @@
 build/
 install/
 log/
+
 *.log
 *.swp
 .DS_Store
 
+
+__pycache__/
+*.pyc
+*.save
