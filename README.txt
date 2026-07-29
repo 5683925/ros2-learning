@@ -5,6 +5,8 @@
 - Ubuntu 22.04
 - ROS2 Humble
 
+##视频演示：https://www.bilibili.com/video/BV1qM3169Eof/?vd_source=10acb7bb4ea6ccbe0d60d3fa561b9ab2
+
 3. 安装
 cd ~/ros2_ws/src
 git clone https://github.com/5683925/ros2-learning.git
@@ -18,7 +20,10 @@ source install/setup.bash
 ros2 run turtlesim turtlesim_node
 
 终端2：启动追踪节点
-python3 src/ros2-learning/turtle_tracker/turtle_tracker/turtle_tracker_node.py
+首次运行前需要先编译：
+colcon build --packages-select turtle_chaser
+source install/setup.bash
+ros2 run turtle_chaser turtle_tracker
 
 终端3：控制 turtle1，turtle2 会自动追踪
 ros2 run turtlesim turtle_teleop_key
